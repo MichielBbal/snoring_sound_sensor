@@ -1,9 +1,7 @@
 # snoring_sound_sensor
 A Raspberry Pi based Sound Sensor to detect snoring (or create your own model using EdgeImpulse)
 
-# Tutorial
-
-## Steps
+## Tutorial
 
 ### 1. Download data from Google's AudioSet
 Google's Audioset [link](https://research.google.com/audioset/index.html) is a large collection of audiosamples. AudioSet has 527 classes of audio that can be used to train Deep Learning models. Unfortunately the quality is not always good as one sample can contain multiple sound classes. (In our case we will see that samples can contain both snoring and other classes, such as music or silence). However this is still the best way to get (free) data in quantities large enough for training deep learning models. We also propose another mechanism of recording your own data in combination with data augmentation.     
