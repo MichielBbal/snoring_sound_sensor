@@ -57,7 +57,8 @@ To install InfluxDB follow the tutorial [here](https://simonhearne.com/2020/pi-i
 
 After training the model in EdgeImpulse, you can download it to your Raspberry using the following command:
 
-`$ cd <to right directory>
+`$ cd <to directory>
+
 `$ edge-impulse-linux-runner --clean --download modelfile.eim
 
 I've provided a script to store the data in a Influx database.
