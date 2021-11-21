@@ -68,8 +68,10 @@ As we will use a Raspberry Pi (Linux) there is no need to use EdgeImpulse's EON 
 ### 6.Install EdgeImpulse and InfluxDb on the Raspberry Pi
 <i>If you have already installed EdgeImpulse and InfluxDb on your Pi, you can skip this step </i>
 
-To install EdgeImpulse follow the tutorial [here](https://docs.edgeimpulse.com/docs/edge-impulse-for-linux)
-To install InfluxDB follow the tutorial [here](https://simonhearne.com/2020/pi-influx-grafana/) 
+* To install EdgeImpulse follow the tutorial [here](https://docs.edgeimpulse.com/docs/edge-impulse-for-linux)
+* To install InfluxDB follow the tutorial [here](https://simonhearne.com/2020/pi-influx-grafana/) 
+
+After installing InfluxDB create a database called 'SNORING'
 
 ### 7. Download the model to the Raspberry and use the provided script 
 
@@ -78,14 +80,19 @@ After training the model in EdgeImpulse, you can download it to your Raspberry u
 `$ cd <to directory>` <br>
 `$ edge-impulse-linux-runner --clean --download modelfile.eim`
 
-I've provided a script to store the data in a Influx database.
+I've provided a script sound_classifier.py to store the data in a Influx database.
 
-After starting the script, there will be some errormessages about ALSA, which you can ignore (November 2021). (The Advanced Linux Sound Architecture (ALSA) provides audio and MIDI functionality to the Linux operating system). 
+When starting the script, there will be some errormessages about ALSA, which you can ignore (November 2021). (The Advanced Linux Sound Architecture (ALSA) provides audio and MIDI functionality to the Linux operating system.). 
 
 ### 8. Connect Grafana to your Raspberry
 I've installed Grafana [link](https://grafana.com/) on my laptop. With it you can easily create a connection to the InfluxDB on your pi. 
 
 Use Grafana on your laptop to connect to the Raspberry and get the data and show the results. 
+* Go to Grafana and select 'data sources' under 'configuration'
+* Select 'add data source' and search for InfluxDB
+* Change the name, add an url (for http://<my_raspberry_ip>:8086
+* Under Database use <SNORING> (or the name of your database)
+* Create panels wile selecting the datafields.
 
 That's it! Enjoy building it. 
 
