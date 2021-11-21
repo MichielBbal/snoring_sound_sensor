@@ -1,15 +1,25 @@
 # Sound Classifier using EdgeImpulse and a Raspberry Pi
-A Raspberry Pi based Sound Sensor to classify sounds. 
+A Raspberry Pi based Sound Sensor to classify sounds. With the Jupyter Notebooks, Python scripts and EdgeImpulse you can train any sound classfier you want. For example, why don't train a model to detect planes flying over your house? In my case, I have chosen to build a model for snoring. 
+ 
+## Background: Sleep and snoring
+Sleep is one of the most important but least understood aspects of our life, wellness, and longevity. Until recently, science had no answer to the question of why we sleep, or what good it served, or why we suffer such devastating health consequences when we don't sleep. 
 
+While there are many excellent consumer devices on the market to track your sleep (such as the Oura Ring or Apple Watch) they have no capability to record the sound of snoring. 
+With this tutorial you can record your snoring and visualise it using Grafana Dashboards. 
 
-## Snoring
+With this sound classfier to detect snoring, you can better understand your sleep. For example, is snoring worse after drinking alcohol? Would snoring be less if you do breathing exercises before going to bed?
+
+As sleep is a highly personal activity, with this 'privacy by design' sound sensor you don't have to share your data with anyone. Also, as the machine learning inference is done on the device (or 'on the edge') there is no recording of (sensitive) sounds. You just store the results of the inference on your local device. 
 
 ## Hardware
 For this tutorial I've used the following hardware:
 - A Raspberry PI 4 with 2 Gb RAM. I've used Raspbian Buster for this tutorial.
 - A microphone connected to the Pi. There are many different microphones available, both cheap and expensive. 
 
+On the raspberry make sure you've enabled SSH. 
+
 ## Tutorial
+This tutorial assumes you've some experience with Python, Machine Learning etc. It's not written for the absolute beginner.
 
 ### 1. Use the snoring sound samples provided here 
 
