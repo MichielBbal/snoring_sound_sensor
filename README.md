@@ -85,14 +85,14 @@ I've provided a script sound_classifier.py to store the data in a Influx databas
 When starting the script, there will be some errormessages about ALSA, which you can ignore (November 2021). (The Advanced Linux Sound Architecture (ALSA) provides audio and MIDI functionality to the Linux operating system.). 
 
 ### 8. Connect Grafana to your Raspberry
-I've installed Grafana [link](https://grafana.com/) on my laptop. With it you can easily create a connection to the InfluxDB on your pi. 
+I've installed Grafana ([link](https://grafana.com/)) on my laptop. With it you can easily create a connection to the InfluxDB on your pi. 
 
 Use Grafana on your laptop to connect to the Raspberry and get the data and show the results. 
 * Go to Grafana and select 'data sources' under 'configuration'
 * Select 'add data source' and search for InfluxDB
-* Change the name, add an url (for http://<my_raspberry_ip>:8086
+* Change the name, add an url: http://<my_raspberry_ip>:8086
 * Under Database use <SNORING> (or the name of your database)
-* Create panels wile selecting the datafields.
+* Create dashboard panels by selecting the right datafields.
 
 ### 9. Conclusion and next steps
 That's it! The most important is that you have fun while building it.
@@ -100,6 +100,6 @@ That's it! The most important is that you have fun while building it.
 What could be possible next steps?
  - Train a sensor with an accelerometer to detect your sleeping position (back, belly or side) or do this with an image classfier on a infrared webcam. 
  - Combine the snoring data with data from your Oura Ring (https://ouraring.com/)
- - Get haptic feedback when snoring using the Neosensory Buzz (https://neosensory.com/) 
+ - Get "haptic feedback" when snoring using the Neosensory Buzz (https://neosensory.com/) 
  
 
