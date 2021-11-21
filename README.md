@@ -94,6 +94,12 @@ Use Grafana on your laptop to connect to the Raspberry and get the data and show
 * Under Database use <SNORING> (or the name of your database)
 * Create panels wile selecting the datafields.
 
-That's it! Enjoy building it. 
-
+### 9. Conclusion and next steps
+That's it! The most important is that you have fun while building it.
+ 
+What could be possible next steps?
+ - Train a sensor with an accelerometer to detect your sleeping position (back, belly or side) or do this with an image classfier on a infrared webcam. 
+ - Combine the snoring data with data from your Oura Ring (https://ouraring.com/)
+ - Get haptic feedback when snoring using the Neosensory Buzz (https://neosensory.com/) 
+ 
 
