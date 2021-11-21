@@ -1,5 +1,13 @@
-# snoring_sound_sensor
-A Raspberry Pi based Sound Sensor to detect snoring (or create your own model using EdgeImpulse)
+# Sound Classifier using EdgeImpulse and a Raspberry Pi
+A Raspberry Pi based Sound Sensor to classify sounds. 
+
+
+## Snoring
+
+## Hardware
+For this tutorial I've used the following hardware:
+- A Raspberry PI 4 with 2 Gb RAM. I've used Raspbian Buster for this tutorial.
+- A microphone connected to the Pi. There are many different microphones available, both cheap and expensive. 
 
 ## Tutorial
 
@@ -41,16 +49,20 @@ In EdgeImpulse I've used the following settings:
 ### 6.Install EdgeImpulse and InfluxDb on the Raspberry Pi
 * If you have already installed EdgeImpulse and InfluxDb on your Pi, you can skip this step*
 * 
-To install EdgeImpulse follow the tutorial here:
-To install InfluxDB follow the tutorial here:
+To install EdgeImpulse follow the tutorial [here](https://docs.edgeimpulse.com/docs/edge-impulse-for-linux)
+To install InfluxDB follow the tutorial [here](https://simonhearne.com/2020/pi-influx-grafana/) 
 
 
 ### 7. Download the model to the Raspberry and use the provided script 
 
-After training the model in EdgeImpulse
+After training the model in EdgeImpulse, you can download it to your Raspberry using the following command:
+
+`$ cd <to right directory>
+`$ edge-impulse-linux-runner --clean --download modelfile.eim
 
 I've provided a script to store the data in a Influx database.
 
+After starting the script, there will be some errormessages about ALSA, which you can ignore (November 2021). (The Advanced Linux Sound Architecture (ALSA) provides audio and MIDI functionality to the Linux operating system). 
 
 ### 8. Connect Grafana to your Raspberry
 I've installed Grafana [link](https://grafana.com/) on my laptop. With it you can easily create a connection to the InfluxDB on your pi. 
