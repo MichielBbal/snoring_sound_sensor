@@ -21,26 +21,24 @@ On the raspberry make sure you've enabled SSH.
 ## Tutorial
 This tutorial assumes you've some experience with Python, Machine Learning etc. It's not written for the absolute beginner.
 
-### 1. Use the snoring sound samples provided here 
+### 1. Three options of collecting raw data
 
-### 2. Record your own data (like silence)
+There are three options of collecting your data:
+1. Use the samples provided in this repo. These is clean data of high quality. There is only snoring, no other sounds, no silence. 
+2. Record your own data using the script 'sound_record.py'. It uses the soundfile package.  I advice to record at least 10 samples of 10 seconds each.
+3. Download from Google's AudioSet.  
 
-A much simpler approach is to record your own data. This can be done with the following python script:
-
-Alternatively, you can run this Jupyter Notebook:
-
-I advice to record at least 10 samples of 10 seconds each.
-
-### 3. Alternative: download (more) data from Google's AudioSet
 Google's Audioset [link](https://research.google.com/audioset/index.html) is a large collection of audiosamples. AudioSet has 527 classes of audio that can be used to train Deep Learning models. Unfortunately the quality is not always good as one sample can contain multiple sound classes. (In our case we will see that samples can contain both snoring and other classes, such as music or silence). However this is still the best way to get (free) data in quantities large enough for training deep learning models. 
 
 To download the data I use a Jupyter Notebook [provided here](https://github.com/aoifemcdonagh/audioset-processing/blob/master/demo.ipynb). You can open it in Google Colab. In Step 3 of the notebook you can change the Audio Class. A full ontology of the AudioSet classes can be found [here](https://research.google.com/audioset/ontology/index.html). I would recommend to download the Class white noise. You can also download the Class snoring, but do keep in mind that the 10s samples of Snoring in AudioSet also contain other sounds such as music, talking or silence. 
 
-### 4. Do data augmentation on the Audio Files
+### 2. Do data augmentation on the Audio Files
 Data augmentation is an important part of creating Deep Learning datasets. With the script provided here you can create four augmented files based on one original file. 
 Please find the script on my Github Gist [here](https://gist.github.com/MichielBbal/15b9081d41f858c3dcd2c4307e401f58#file-audio_data_augmentation-py)
 
-### 5. Upload to EdgeImpulse & train your dataset. 
+### 3. Upload to EdgeImpulse & train your dataset. 
+
+[EdgeImpulse](www.edgeimpulse.com) is a low code platform to train machine learning models used on microcontrollers (eg. Arduino) and single board computers such as the Raspberry Pi. 
 
 There are tons of tutorials on EdgeImpulse so I won't give a full tutorial here.
 
@@ -65,7 +63,7 @@ With these settings I was able to achieve a model result of 92.7%.
 
 As we will use a Raspberry Pi (Linux) there is no need to use EdgeImpulse's EON Tuner.
 
-### 6.Install EdgeImpulse and InfluxDb on the Raspberry Pi
+### 4.Install EdgeImpulse and InfluxDb on the Raspberry Pi
 <i>If you have already installed EdgeImpulse and InfluxDb on your Pi, you can skip this step </i>
 
 * To install EdgeImpulse follow the tutorial [here](https://docs.edgeimpulse.com/docs/edge-impulse-for-linux)
@@ -73,7 +71,7 @@ As we will use a Raspberry Pi (Linux) there is no need to use EdgeImpulse's EON 
 
 After installing InfluxDB create a database called 'SNORING'
 
-### 7. Download the model to the Raspberry and use the provided script 
+### 5. Download the model to the Raspberry and use the provided script 
 
 After training the model in EdgeImpulse, you can download it to your Raspberry using the following command:
 
@@ -84,7 +82,7 @@ I've provided a script sound_classifier.py to store the data in a Influx databas
 
 When starting the script, there will be some errormessages about ALSA, which you can ignore (November 2021). (The Advanced Linux Sound Architecture (ALSA) provides audio and MIDI functionality to the Linux operating system.). 
 
-### 8. Connect Grafana to your Raspberry
+### 6. Connect Grafana to your Raspberry
 I've installed Grafana ([link](https://grafana.com/)) on my laptop. With it you can easily create a connection to the InfluxDB on your pi. 
 
 Use Grafana on your laptop to connect to the Raspberry and get the data and show the results. 
@@ -94,7 +92,7 @@ Use Grafana on your laptop to connect to the Raspberry and get the data and show
 * Under Database use <SNORING> (or the name of your database)
 * Create dashboard panels by selecting the right datafields.
 
-### 9. Conclusion and next steps
+### 7. Conclusion and next steps
 That's it! The most important is that you have fun while building it.
  
 What could be possible next steps?
