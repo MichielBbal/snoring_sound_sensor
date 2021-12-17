@@ -98,6 +98,6 @@ That's it! The most important is that you have fun while building it.
 What could be possible next steps?
  - Train a sensor with an accelerometer to detect your sleeping position (back, belly or side) or do this with an image classfier on a infrared webcam. 
  - Combine the snoring data with data from your Oura Ring (https://ouraring.com/)
- - Get "haptic feedback" when snoring using the Neosensory Buzz (https://neosensory.com/) 
+ - Get "haptic feedback" when snoring
  
 
