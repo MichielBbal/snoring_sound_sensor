@@ -85,9 +85,12 @@ After training the model in EdgeImpulse, you can download it to your Raspberry u
 
 Also, install the edge_impulse_linux package using the following commands: <br>
 `$ $ sudo apt-get install libatlas-base-dev libportaudio0 libportaudio2 libportaudiocpp0 portaudio19-dev` <br> 
-`$ pip3 install edge_impulse_linux -i https://pypi.python.org/simple` 
+`$ pip3 install edge_impulse_linux -i https://pypi.python.org/simple` <br>
+(more info can be found [here](https://pypi.org/project/edge-impulse-linux/)
 
-I've provided a script sound_classifier.py to store the data in a Influx database.
+I've provided a script sound_classifier.py to store the data in a Influx database. You can run it with:
+
+`$ python3 sound_classifier.py modelfile.eim` <br>
 
 When starting the script, there will be some errormessages about ALSA, which you can ignore (November 2021). (The Advanced Linux Sound Architecture (ALSA) provides audio and MIDI functionality to the Linux operating system.). 
 
