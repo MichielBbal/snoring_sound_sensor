@@ -71,7 +71,10 @@ As we will use a Raspberry Pi (Linux) there is no need to use EdgeImpulse's EON 
 * To install EdgeImpulse follow the tutorial [here](https://docs.edgeimpulse.com/docs/edge-impulse-for-linux)
 * To install InfluxDB follow the tutorial [here](https://simonhearne.com/2020/pi-influx-grafana/) 
 
-After installing InfluxDB create a database called 'SNORING'
+After installing InfluxDB create a database called 'SNORING'.
+
+Also install influxdb python client: <br>
+`$ pip3 install influxdb`
 
 ### 5. Download the model to the Raspberry and use the provided script 
 
