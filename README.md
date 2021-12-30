@@ -114,9 +114,10 @@ Use Grafana on your laptop to connect to the Raspberry and get the data and show
 ### 7. Conclusion and next steps
 That's it! The most important is that you have fun while building it.
  
-What could be possible next steps?
- - Train a sensor with an accelerometer to detect your sleeping position (back, belly or side) or do this with an image classfier on a infrared webcam. 
- - Combine the snoring data with data from your Oura Ring (https://ouraring.com/)
+If you are interested in combining it with data from the Oura Ring [ouraring.com](https://ouraring.com/), please see my notebook on getting data from Oura.
+ 
+ What could be possible next steps?
+ - Train a sensor with an accelerometer to detect your sleeping position (back, belly or side) and combine it with
  - Get "haptic feedback" when snoring
  
 
