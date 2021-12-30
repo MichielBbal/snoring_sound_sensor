@@ -1,7 +1,7 @@
 # Sound Classifier using EdgeImpulse and a Raspberry Pi
 A Raspberry Pi based Sound Sensor to classify sounds. With the Jupyter Notebooks, Python scripts and EdgeImpulse you can train any sound classfier you want. For example, why don't train a model to detect planes flying over your house? In my case, I have chosen to build a model for snoring. 
 
-This is build and tested on Rasbian Buster.
+<i>This is build and tested on Rasbian Buster. </i>
  
 ## Background: Sleep and snoring
 Sleep is one of the most important but least understood aspects of our life, wellness, and longevity. Until recently, science had no answer to the question of why we sleep, or what good it served, or why we suffer such devastating health consequences when we don't sleep. 
@@ -15,7 +15,7 @@ As sleep is a highly personal activity, with this 'privacy by design' sound sens
 
 ## Hardware
 For this tutorial I've used the following hardware:
-- A Raspberry PI 4 with 2 Gb RAM. I've used Raspbian Buster for this tutorial.
+- A Raspberry PI 4 with 2 Gb RAM. I've also tested it with a Raspberry Pi Zero V2.  I've used Raspbian Buster for this tutorial.
 - A microphone connected to the Pi. There are many different microphones available, both cheap and expensive. 
 
 On the raspberry make sure you've enabled SSH. 
