@@ -75,13 +75,14 @@ After installing InfluxDB create a database called 'SNORING'
 
 ### 5. Download the model to the Raspberry and use the provided script 
 
-After training the model in EdgeImpulse, you can download it to your Raspberry using the following command:
+After training the model in EdgeImpulse, you can download it to your Raspberry using the following command: <br>
 
 `$ cd <to directory>` <br>
 `$ edge-impulse-linux-runner --clean --download modelfile.eim`
 
-Also, install the following package:
-`$ pip3 install edge_impulse_linux`
+Also, install the edge_impulse_linux package using the following commands: <br>
+`$ $ sudo apt-get install libatlas-base-dev libportaudio0 libportaudio2 libportaudiocpp0 portaudio19-dev` <br> 
+`$ pip3 install edge_impulse_linux -i https://pypi.python.org/simple` 
 
 I've provided a script sound_classifier.py to store the data in a Influx database.
 
