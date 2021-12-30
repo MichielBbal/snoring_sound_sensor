@@ -87,6 +87,13 @@ I've provided a script sound_classifier.py to store the data in a Influx databas
 
 When starting the script, there will be some errormessages about ALSA, which you can ignore (November 2021). (The Advanced Linux Sound Architecture (ALSA) provides audio and MIDI functionality to the Linux operating system.). 
 
+### 5b. Troubleshooting
+After running it for the first time I got the following error:
+`$ Original error was: libf77blas.so.3: cannot open shared object file: No such file or directory`<br>
+
+The solution was: `$ sudo apt-get install libatlas-base-dev`
+(see for more info [here](https://github.com/numpy/numpy/issues/14772) )
+
 ### 6. Connect Grafana to your Raspberry
 I've installed Grafana ([link](https://grafana.com/)) on my laptop. With it you can easily create a connection to the InfluxDB on your pi. 
 
